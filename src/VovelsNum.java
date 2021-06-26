@@ -9,22 +9,23 @@ public class VovelsNum {
 		String line = scanner.nextLine();
 		int count = 0;
 		
-		for(int i = 0; i < line.length(); i++) {
-			char currChar = line.charAt(i);
-			
-			if(isVowel(currChar)) count++;
+		Scanner lineSc = new Scanner(line);
+		lineSc.useDelimiter("");
+		
+		while(lineSc.hasNext()) {
+			String next = lineSc.next();
+			if(isVowel(next)) count++;
 		}
+		
 		
 		System.out.println("Vowels in your world: " + count);
 		scanner.close();
+		lineSc.close();
 	}
 	
 	
-	public static boolean isVowel(char letter) {
+	public static boolean isVowel(String letter) {
 		if("aeiouAEIOU".indexOf(letter) != -1) return true;
 		else return false;
 	}
 }
-
-
-//if(line[i].matches(".*[^a-z].*")) vowels.concat("a");
