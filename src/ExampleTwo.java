@@ -12,7 +12,6 @@ public class ExampleTwo {
 		
 		while(scanner.hasNextInt()) {
 			int nextNum = scanner.nextInt();
-			
 			count += nextNum;
 			comaSeparated += nextNum;
 			
@@ -21,6 +20,7 @@ public class ExampleTwo {
 		
 		System.out.println("comaSeparated: " + comaSeparated);
 		System.out.println("Count: " + count);
+		System.out.println("is comaSeparated a String? -> " + (comaSeparated instanceof String));
 		
 		scanner.close();
 	}
